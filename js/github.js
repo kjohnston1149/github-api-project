@@ -2,8 +2,6 @@ var apiKey = require('./../.env').apiKey;
 
 function Github(){
 }
-var repoNameArray = [];
-var repoDescriptionArray = [];
 
 Github.prototype.getRepos = function(userName, repoNumber){
   $.get('https://api.github.com/users/'+ userName + '/repos?access_token=' + apiKey).then(function(response){

@@ -1,5 +1,5 @@
-$color: 	#d36154;
-$green:   rgba(255, 255, 255, 0.81);
+
+$container:   rgba(255, 255, 255, 0.81);
 
 body {
   background-image: url(../../images/github.png);
@@ -7,28 +7,29 @@ body {
   text-align: center;
 }
 h1 {
-  color: $color;
+  color: black;
+  font-size: 4em;
+  font-style: italic;
+  font-weight: bold;
 }
 
-th, td {
-  padding: 5px
 
-}
 table {
-  position: relative;
+  position: center;
   border: solid black 2px;
 }
 
 td, th {
+  padding: 5px;
   border: solid black 2px;
   text-align: center;
 }
 
 .container {
- background-color: $green;
+ background-color: $container;
  margin-top: 30px;
  border-radius: 10px;
- padding: 50px;
+ padding: 25px;
 }
 
 #results {
