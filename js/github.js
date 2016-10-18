@@ -4,15 +4,20 @@ function Github(){
 
 }
 
-Github.prototype.getRepos = function(){
-  $.get('https://api.github.com/users/kjohnston1149/repos?access_token=' + apiKey).then(function(public){
-    // console.log(JSON.stringify(public));
-  }).fail(function(error){
-    console.log(error.responseJSON.message);
-  });
-  $.get('https://api.github.com/users/kjohnston1149/repos?access_token=' + apiKey).then(function(response){
+Github.prototype.getRepos = function(userName){
+  // $.get('https://api.github.com/users/'+ userName + '/repos?access_token=' + apiKey).then(function(public){
+  //   // console.log(JSON.stringify(public));
+  // }).fail(function(error){
+  //   console.log(error.responseJSON.message);
+  // });
+  $.get('https://api.github.com/users/'+ userName + '/repos?access_token=' + apiKey).then(function(response){
     console.log(JSON.stringify(response));
-    console.log(response[0].name)
+    repoName = response[0].name;
+    repoDescription = response[0].description;
+    console.log(repoName);
+    console.log(repoDescription);
+    return repoName;
+    return repoDescription;
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
