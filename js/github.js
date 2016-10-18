@@ -7,18 +7,9 @@ var repoDescriptionArray = [];
 
 Github.prototype.getRepos = function(userName){
   $.get('https://api.github.com/users/'+ userName + '/repos?access_token=' + apiKey).then(function(response){
-    console.log(response);
-    for(var i = 0; i <= response.length; i++){
-      // repoName = response[i].name;
-      // repoDescription = response[i].description;
-      repoNameArray.push(response[i].name);
-      repoDescriptionArray.push(response[i].description);
-      console.log(repoNameArray);
-      $('#nameOfRepo').append(repoNameArray);
-      $('#descriptionOfRepo').append(repoDescriptionArray);
-
-    }
-
+    repoName = response[0].name;
+    repoDescription = response[0].description;
+    $('#nameOfRepo').text(repoName);   $('#descriptionOfRepo').text(repoDescription);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
