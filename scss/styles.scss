@@ -1,11 +1,34 @@
 $color: 	#d36154;
+$green:   rgba(255, 255, 255, 0.81);
 
+body {
+  background-image: url(../../images/github.png);
+  background-repeat: repeat;
+  text-align: center;
+}
 h1 {
   color: $color;
 }
 
 th, td {
   padding: 5px
+
+}
+table {
+  position: relative;
+  border: solid black 2px;
+}
+
+td, th {
+  border: solid black 2px;
+  text-align: center;
+}
+
+.container {
+ background-color: $green;
+ margin-top: 30px;
+ border-radius: 10px;
+ padding: 50px;
 }
 
 #results {
