@@ -9,8 +9,9 @@ $(document).ready(function(){
     event.preventDefault();
     $('#results').show();
     var userName = $('#userNameInput').val();
+    var repoNumber = $('#repoIDNumber').val();
     userGithub = new Github;
-    userGithub.getRepos(userName);
+    userGithub.getRepos(userName, repoNumber);
 
 
   });
