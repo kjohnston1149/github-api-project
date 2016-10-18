@@ -13,7 +13,10 @@ _A website that uses the Github API managed by gulp, frontend by bower, and css 
 * _Modify project information in the package.json and bower.json files_
 * _Run npm install to install npm dependencies_
 * _Run bower install to install bower dependencies_
-* _run gulp build to build the project for the first time and gulp serve to start the development server_
+* _Request an API key from GitHub if you do not already have access to one._
+* _Create a .env file in the top level of the project directory._
+* _Add your API key to the .env folder using the following set up: "exports.apiKey = [YOUR API KEY GOES HERE]"_
+* _Run gulp build to build the project for the first time and gulp serve to start the development server._
 
 
 
