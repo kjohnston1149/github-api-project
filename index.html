@@ -11,7 +11,6 @@
   <body>
     <div class="container">
       <h1>API project test</h1>
-
         <form id="userNameForm">
           <div class="form-group">
             <label for="userNameInput">Enter a GitHub username:</label>
@@ -19,7 +18,18 @@
           </div>
           <button id="userNameSubmit" type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <p id="nameOfRepo"></p>
-        <p id="descriptionOfRepo"></p>
+        <div id="results">
+          <table>
+            <thead><tr>
+              <th>Repository Name</th>
+              <th>Repository Description</th>
+            </tr>
+            <tr>
+              <td id="nameOfRepo"></td>
+              <td id="descriptionOfRepo"></td>
+            </tr>
+          </table>
+        </div>
+    </div>
   </body>
 </html>
